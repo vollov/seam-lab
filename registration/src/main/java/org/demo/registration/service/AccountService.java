@@ -7,6 +7,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import org.apache.commons.logging.Log;
 import org.demo.registration.domain.User;
@@ -19,21 +20,18 @@ public class AccountService {
 	@Inject
 	private User user;
 
-	@Inject
+	@PersistenceContext
 	private EntityManager em;
 
-	@Inject
 	private static Log log;
 
 	public User getUser() {
 		return user;
 	}
 
-
 	public void setUser(User user) {
 		this.user = user;
 	}
-
 
 	/**
 	 * register a new user
@@ -44,6 +42,8 @@ public class AccountService {
 		List<User> existing = em.createQuery("select u.username from User u where u.username=#{user.username}")
 				.getResultList();
 
+		log.info("Registered new user #{user.username}");
+		
 		if (existing.size() == 0) {
 			em.persist(user);
 		}
