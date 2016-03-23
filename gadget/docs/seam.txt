@@ -1,0 +1,11 @@
+https://docs.jboss.org/seam/1.0.0.GA/reference/en/html/index.html
+
+[1]
+Seam requires the following entry in your web.xml file:
+
+<listener>
+    <listener-class>org.jboss.seam.servlet.SeamListener</listener-class>
+</listener>
+This listener is responsible for bootstrapping Seam, and for destroying session and application contexts.
+
+[2]
