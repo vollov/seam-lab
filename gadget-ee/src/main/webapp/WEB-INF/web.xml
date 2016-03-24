@@ -4,10 +4,6 @@
 	version="3.1">
 	<display-name>Gadget</display-name>
 
-    <listener>
-        <listener-class>org.jboss.seam.servlet.SeamListener</listener-class>
-    </listener>
-
     <context-param>
         <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
         <param-value>.xhtml</param-value>

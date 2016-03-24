@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.inject.Named;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,11 +13,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import org.jboss.seam.annotations.Name;
-
+/**
+ * Bean will be refered in JSF as 'gadget'
+ */
 @Entity
 @Table(name = "gadget")
-@Name("gadget")
+@Named("gadget")
 public class Gadget implements Serializable {
 	
 	private static final long serialVersionUID = -1L;
