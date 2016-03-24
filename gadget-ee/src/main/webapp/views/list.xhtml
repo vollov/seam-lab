@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h2>Gadget List</h2>
+	
+	<f:view>
+        <h:messages/>
+        <!--  Show the current gadget catalog -->
+        <h:dataTable value="#{gadgetService.allGadgets}" var="g">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Type" />
+                </f:facet>
+                <h:outputText value="#{g.type}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Description" />
+                </f:facet>
+                <h:outputText value="#{g.description}" />
+            </h:column>
+        </h:dataTable>
+        <h:form>
+            <!-- Link to add a new gadget -->
+            <h:link action="/views/addGadget">
+            	<h:outputText value="[Add a new gadget]"/>
+           	</h:link>
+        </h:form>
+    </f:view>
+	</ui:define>
+</ui:composition>

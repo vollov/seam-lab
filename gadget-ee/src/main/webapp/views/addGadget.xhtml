@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h2>Gadget List</h2>
+	
+    <f:view>
+        <h:form>
+            <table border="0">
+                <tr>
+                    <td>Description:</td>
+                    <td>
+                        <h:inputText value="#{gadget.description}"
+                                     required="true" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type:</td>
+                    <td>
+                        <h:selectOneMenu value="#{gadget.type}"
+                                         required="true">
+                            <f:selectItems value="#{gadget.gadgetTypes}" />
+                        </h:selectOneMenu>
+                    </td>
+                </tr>
+            </table>
+            <h:commandButton type="submit" value="Create"
+                             action="#{gadgetService.newGadget}" />
+        </h:form>
+    </f:view>
+	</ui:define>
+</ui:composition>
