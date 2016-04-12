@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#views#login.jsf" PATH="/views/login.jsf"
+  SHAPE="256,289,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#home.xhtml" PATH="/home.xhtml"
+  SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#home.xhtml:0" NAME="item" PATH="/home.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{navigationController.showPage}:#views#inbox.jsf"
+    NAME="output" PATH="/views/inbox.jsf"
+    TARGET="rules:#views#inbox.jsf"
+    TITLE="#{navigationController.showPage}:success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="failure:#{navigationController.showPage}:#views#login.jsf"
+    NAME="output1" PATH="/views/login.jsf"
+    TARGET="rules:#views#login.jsf"
+    TITLE="#{navigationController.showPage}:failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#views#inbox.jsf" PATH="/views/inbox.jsf"
+  SHAPE="256,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#stock#getsymbol.xhtml"
+  PATH="/stock/getsymbol.xhtml" SHAPE="32,385,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#stock#getsymbol.xhtml:0" NAME="item"
+   PATH="/stock/getsymbol.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ok::#stock#stockvalue.xhtml" NAME="output"
+    PATH="/stock/stockvalue.xhtml"
+    TARGET="rules:#stock#stockvalue.xhtml" TITLE="ok" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#stock#stockvalue.xhtml"
+  PATH="/stock/stockvalue.xhtml" SHAPE="240,401,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#postage#getrequest.xhtml"
+  PATH="/postage/getrequest.xhtml" SHAPE="32,497,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#postage#getrequest.xhtml:0" NAME="item"
+   PATH="/postage/getrequest.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ok::#postage#showpostage.xhtml"
+    NAME="output" PATH="/postage/showpostage.xhtml"
+    TARGET="rules:#postage#showpostage.xhtml" TITLE="ok" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#postage#showpostage.xhtml"
+  PATH="/postage/showpostage.xhtml" SHAPE="240,513,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
