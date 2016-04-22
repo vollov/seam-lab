@@ -29,6 +29,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		http://www.laliluna.com/articles/posts/first-jboss-seam.html
 
 	</build>
 	<repositories>
@@ -42,7 +43,6 @@
 	</repositories>
 
 	<dependencies>
-
 		<!-- JBoss Seam minimal -->
 		<dependency>
 			<groupId>org.jboss.seam</groupId>
