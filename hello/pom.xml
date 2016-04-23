@@ -103,6 +103,18 @@
 		</dependency>
 
 
+<dependency>
+	<groupId>javassist</groupId>
+	<artifactId>javassist</artifactId>
+	<version>3.12.1.GA</version>
+</dependency>
+
+<dependency>
+	<groupId>dom4j</groupId>
+	<artifactId>dom4j</artifactId>
+	<version>1.6.1</version>
+</dependency>
+
 		<!-- I like to have log4j without Hibernate as well -->
 		<dependency>
 			<groupId>log4j</groupId>
